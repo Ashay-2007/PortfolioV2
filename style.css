@@ -1,4 +1,4 @@
-@import url('<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 *{
     margin: 0;
@@ -16,12 +16,17 @@
 .navbar {
     position: fixed;
     width: 100%;
-    padding: 15px 0;
-    background: crimson;
+    padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
 }
 
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
 .navbar .max-width {
+    /* padding: ; */
     display: flex;
     align-items: center;
     justify-content: space-between;   
@@ -30,12 +35,19 @@
 .navbar .logo a{
     color: #fff;
     font-size: 35px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
+.navbar .logo a span {
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+    color: #fff;
+}
 .navbar .menu li{
     list-style: none;
-    display: inline;
+    display: inline-block;
 }
 
 .navbar .menu li a{
@@ -43,6 +55,15 @@
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
+    transition: color 0.3s ease ;
+} 
+
+.navbar .menu li a:hover {
+    color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: #fff;
 }
 
 /* home section styling*/
