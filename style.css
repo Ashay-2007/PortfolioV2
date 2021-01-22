@@ -304,10 +304,91 @@ section .title::after{
     width: 80%;
 }
 
+/*===== Margenes =====*/
+:root{
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+}
 
+/*===== LAYOUT =====*/
 
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-2);
+    margin-right: var(--mb-2);
+}
 
+/* portfolio styles */
+/* .bd-grid .portfolio__content{
+    margin-bottom: var(--mb-2);
+} */
+.portfolio__nav{
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
 
+.portfolio__item{
+    margin: 0 var(--mb-2);
+    cursor: pointer;
+}
+.portfolio__content{
+    margin-bottom: var(--mb-2);
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(174, 190, 205, .3);
+}
+.portfolio__img{
+    width: 100%;
+    transition: .4s;
+}
+.portfolio__data{
+    padding: 1.5rem;
+}
+.portfolio__subtitle{
+    font-size: 1.25rem;
+    color: #3E0E12;
+    margin: var(--mb-2) 0;
+}
+.portfolio__content:hover{
+    box-shadow: 0 6px 8px rgba(174, 190, 205, .4);
+}
+.portfolio__content:hover .portfolio__img{
+    transform: scale(1.02);
+}
+.active-portfolio{
+    color: crimson;
+    font-weight: 600;
+}
+
+/*BUTTONS*/
+.button{
+    display: inline-block;
+    background-color: crimson;
+    color: #fff;
+    padding: .75rem 2.5rem;
+    font-weight: 600;
+    border-radius: .5rem;
+}
+.button:hover{
+    box-shadow: 0 10px 36px rgba(0,0,0,.15);
+}
+.button-link{
+    background: none;
+    color: #111;
+    padding: 0;
+}
+.button-link:hover{
+    background: crimson;
+}
 
 /* responsive media query start */
 @media(max-width: 1300px){
@@ -315,6 +396,17 @@ section .title::after{
         margin-left: 0px;
     }
 }
+
+@media screen and (min-width: 1024px){
+    .bd-grid{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .home__img{
+      right: 10%;
+    }
+}
+
 @media(max-width: 1104px){
     .about .about-content .left img{
         height: 350px;
@@ -414,3 +506,13 @@ section .title::after{
     }
 }
 
+@media screen and (min-width: 576px){
+    .portfolio__cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width: 768px){
+    .portfolio__cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
