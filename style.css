@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
@@ -136,7 +140,7 @@
 section{
     padding: 100px 0;
 }
-.about, .skills, .contact, .portfolio {
+.about, .skills, .contact, .portfolio, footer {
     font-family: 'Poppins', sans-serif;
 
 }
@@ -489,6 +493,20 @@ section .title::after{
     background: none;
 }
 
+/* footer section styling */
+footer{
+    background: #111;
+    text-align: center;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
 
 /* responsive media query start */
 @media(max-width: 1300px){
