@@ -93,7 +93,7 @@ html{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: lightgrey;
     top: auto;
     right: 30px;
     bottom: 10px;
@@ -110,7 +110,7 @@ html{
 }
 .scroll-up-btn.show{
     bottom: 30px;
-    opacity: 1;
+    opacity: 0.8;
     pointer-events: auto;
 }
 
