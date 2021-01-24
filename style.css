@@ -30,7 +30,8 @@ html{
 
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: #fff;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
 }
 .navbar .max-width {
     /* padding: ; */
@@ -59,19 +60,25 @@ html{
 }
 
 .navbar .menu li a{
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease ;
+}
+.navbar.sticky .menu li a{
+    color: #111;
 } 
-
+.navbar.sticky .logo a{
+    color: #111;
+}
 .navbar .menu li a:hover {
     color: crimson;
 }
 
 .navbar.sticky .menu li a:hover {
-    color: #fff;
+    color: grey;
 }
 
 /* menu button styling */
@@ -82,6 +89,30 @@ html{
     display: none;
 }
 
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    top: auto;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
 
 /* home section styling*/
 .home {
@@ -205,7 +236,7 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
-.about .about-content .right .text .span{
+.about .about-content .right .text span{
     color: crimson;
 }
 .about .about-content .right p{
@@ -359,7 +390,12 @@ section .title::after{
     padding: 1.5rem;
 }
 .portfolio__subtitle{
-    font-size: 1.25rem;
+    font-size: 0.813rem;
+    color: #7B6F71;
+    
+}
+.portfolio__title{
+    font-size: 1.125rem;
     color: #3E0E12;
     margin: var(--mb-2) 0;
 }
@@ -387,9 +423,9 @@ section .title::after{
     box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
 .button-link{
-    background: none;
+    background: lightgrey;
     color: #111;
-    padding: 0;
+    padding: 5px;
 }
 .button-link:hover{
     background: crimson;
@@ -546,8 +582,12 @@ footer span a:hover{
         display: block;
         z-index: 999;
     }
+    .navbar.sticky .menu-btn{
+        color: #111;
+    }
     .menu-btn i.active:before {
         content: "\f00d";
+        color: #fff;
     }
     .navbar .menu {
         position: fixed;
@@ -570,6 +610,9 @@ footer span a:hover{
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+    }
+    .navbar.sticky .menu li a{
+        color: #fff;
     }
     .home .home-content .text-2{
         font-size: 70px;
